@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane cache="true" cacheHint="QUALITY" prefHeight="600.0" prefWidth="800.0" styleClass="backgrounPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.POO.HomeViewController">
+   <AnchorPane layoutX="204.8" layoutY="11.2" prefHeight="46.0" prefWidth="385.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+      <children>
+         <AnchorPane prefHeight="62.0" prefWidth="585.0" styleClass="backgrounAnchorPane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+               <HBox alignment="CENTER" prefHeight="33.0" prefWidth="334.0" spacing="10.0" styleClass="champ-recherche" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <children>
+                     <Button mnemonicParsing="false" styleClass="bouton-simple">
+                        <graphic>
+                           <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@img/search.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                     <TextField prefHeight="26.0" prefWidth="302.0" promptText="Recherche..." styleClass="champ-recherche" />
+                  </children>
+                  <padding>
+                     <Insets left="10.0" />
+                  </padding>
+               </HBox>
+               <Button mnemonicParsing="false" styleClass="bouton-simple" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <graphic>
+                     <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@img/notification.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+            <effect>
+               <DropShadow height="10.0" radius="4.5" width="10.0" />
+            </effect>
+         </AnchorPane>
+      </children>
+   </AnchorPane>
+   <AnchorPane layoutY="11.2" prefHeight="282.0" prefWidth="182.0" stylesheets="@style.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+         <HBox alignment="CENTER" prefHeight="61.0" prefWidth="182.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/logo.png" />
+                  </image>
+               </ImageView>
+               <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Library" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="14.0" />
+                  </font>
+               </Text>
+            </children>
+         </HBox>
+         <VBox layoutY="79.2" prefHeight="271.0" prefWidth="182.0" spacing="15.0" styleClass="backgrounAnchorPane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="79.0">
+            <children>
+               <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="138.0" styleClass="menu">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#chargerDashbord" styleClass="bouton" text="Tableau de bord   ">
+                        <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@img/dashboard.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="20.0" />
+                  </VBox.margin>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="13.0" prefWidth="138.0" styleClass="menu">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#chargerLivres" styleClass="bouton" text="Livres  ">
+                        <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@img/book.png" />
+                              </image>
+                           </ImageView>
+                        </graphic></Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="20.0" />
+                  </VBox.margin>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="9.0" prefWidth="138.0" styleClass="menu">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#chargerMembres" styleClass="bouton" text="Menbres  ">
+                        <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@img/menbres.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="20.0" />
+                  </VBox.margin>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="9.0" prefWidth="138.0" styleClass="menu">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#chargerEmprunts" styleClass="bouton" text="Emprunts  ">
+                        <graphic>
+                           <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@img/emprunt.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="20.0" />
+                  </VBox.margin>
+               </HBox>
+            </children>
+            <effect>
+               <DropShadow height="10.0" radius="4.5" width="10.0" />
+            </effect>
+         </VBox>
+      </children>
+   </AnchorPane>
+   <AnchorPane fx:id="conteneurPrincipal" layoutX="202.0" layoutY="66.0" styleClass="backgrounAnchorPane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+      <effect>
+         <DropShadow height="10.0" radius="4.5" width="10.0" />
+      </effect>
+   </AnchorPane>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

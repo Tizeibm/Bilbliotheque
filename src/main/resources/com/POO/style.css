@@ -1,0 +1,54 @@
+.backgrounAnchorPane{
+  -fx-alignment: center;
+  -fx-background-color : #2b2f33;
+  -fx-background-radius: 7;
+}
+.backgrounPane{
+  -fx-background-color : #212529;
+}
+.champ-recherche {
+  -fx-background-color: #212529;
+  -fx-text-fill: white;
+  -fx-prompt-text-fill: rgba(129, 129, 129, 0.78);
+  -fx-background-radius: 10;
+}
+.bouton{
+  -fx-background-color: transparent;
+  -fx-text-fill: white;
+  -fx-border-color: white;
+  -fx-font-size: 11px;
+  -fx-border-radius: 3;
+  -fx-padding: 0;
+  -fx-cursor: hand;
+}
+
+.bouton-simple {
+  -fx-background-color: transparent;
+  -fx-text-fill: white;
+  -fx-border-color: transparent;
+  -fx-font-size: 11px;
+  -fx-cursor: hand;
+}
+
+.bouton:hover {
+  -fx-text-fill: yellow;
+  -fx-border-color: yellow;
+}
+.book-card {
+  -fx-background-color: #ffffff;
+  -fx-padding: 10;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+  -fx-pref-width: 180;
+}
+
+.book-title {
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.book-author,
+.book-genre {
+  -fx-font-size: 12px;
+}

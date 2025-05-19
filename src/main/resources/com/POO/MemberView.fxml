@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="636.0" prefWidth="866.0" styleClass="backgrounAnchorPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.POO.controller.MemberViewController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+      
+          <!-- Haut -->
+          <top>
+              <Label prefHeight="27.0" prefWidth="183.0" text="Gestion des Membres" textFill="#ffba00" BorderPane.alignment="CENTER">
+                  <BorderPane.margin>
+                      <Insets bottom="10" top="10" />
+                  </BorderPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+              </Label>
+          </top>
+      
+          <!-- Centre -->
+          <center>
+              <HBox>
+      
+                  <!-- Liste des membres -->
+                  <VBox spacing="10">
+                      <Label style="-fx-font-weight: bold" text="Liste des membres" textFill="WHITE" />
+                      <ListView fx:id="memberListView" prefHeight="382.0" prefWidth="925.0">
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                  </ListView>
+                  </VBox>
+              </HBox>
+          </center>
+         <bottom>
+   
+                  <!-- Formulaire de saisie -->
+               <VBox spacing="10" BorderPane.alignment="CENTER">
+                   <Label style="-fx-font-weight: bold" text="Informations du membre" textFill="WHITE">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Label>
+               <HBox prefHeight="28.0" prefWidth="806.0" spacing="10.0">
+                  <children>
+                     <VBox>
+                        <children>
+                           <Label text="Nom :" textFill="WHITE" />
+                           <TextField fx:id="nameField" styleClass="champ-recherche" />
+                        </children>
+                     </VBox>
+                     <VBox>
+                        <children>
+                           <Label text="Email :" textFill="WHITE" />
+                           <TextField fx:id="emailField" styleClass="champ-recherche" />
+                        </children>
+                     </VBox>
+                     <VBox>
+                        <children>
+                           <Label text="Type :" textFill="WHITE" />
+                           <ComboBox fx:id="typeComboBox" prefHeight="25.0" prefWidth="146.0" />
+                        </children>
+                     </VBox>
+                  </children>
+               </HBox>
+   
+                      <HBox spacing="10.0">
+                       <Button onAction="#handleAddMember" style="-fx-background-color: yellow;" text="  Ajouter  ">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                       <Button onAction="#handleUpdateMember" style="-fx-background-color: yellow;" text="  Modifier  ">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                       <Button onAction="#handleDeleteMember" style="-fx-background-color: yellow;" text="  Supprimer  ">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                       <Button onAction="#clearFields" style="-fx-background-color: yellow;" text="  Effacer  la zone de texte">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                   </HBox>
+               </VBox>
+         </bottom>
+      
+      </BorderPane>
+   </children>
+</AnchorPane>

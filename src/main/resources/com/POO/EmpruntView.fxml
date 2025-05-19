@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane styleClass="backgrounAnchorPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.POO.controller.EmpruntController">
+   <children>
+      <VBox AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+      
+          <!-- Titre -->
+          <Label style="-fx-font-size: 18px; -fx-font-weight: bold" text="Gestion des Emprunts" textFill="#eeff00">
+            <VBox.margin>
+               <Insets bottom="25.0" />
+            </VBox.margin>
+         </Label>
+      
+          <!-- Formulaire de saisie -->
+          <HBox spacing="10">
+              <VBox spacing="5">
+                  <Label text="Membre :" textFill="WHITE" />
+                  <ComboBox fx:id="memberComboBox" prefWidth="200" />
+              </VBox>
+      
+              <VBox spacing="5">
+                  <Label text="Livre :" textFill="WHITE" />
+                  <ComboBox fx:id="bookComboBox" prefWidth="200" />
+              </VBox>
+      
+              <VBox spacing="5">
+                  <Label text="Date d’emprunt :" textFill="WHITE" />
+                  <DatePicker fx:id="empruntDatePicker" prefWidth="150" styleClass="champ-recherche" />
+              </VBox>
+          </HBox>
+      
+          <!-- Bouton pour ajouter un emprunt -->
+          <Button fx:id="addEmpruntButton" onAction="#AddEmprunt" style="-fx-background-color: yellow;" text="Ajouter un Emprunt">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+         </Button>
+      
+          <!-- Liste des emprunts en cours -->
+          <Label style="-fx-font-weight: bold" text="Liste des Emprunts en cours" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+          <ListView fx:id="empruntListView" prefHeight="200" />
+      
+          <!-- Bouton pour retourner un livre -->
+          <HBox alignment="CENTER_RIGHT">
+              <Button onAction="#ReturnBook" style="-fx-background-color: yellow;" text="Retourner le Livre">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+          </HBox>
+      
+          <!-- Liste des livres retournés -->
+          <Label style="-fx-font-weight: bold; -fx-padding: 10 0 0 0;" text="Livres Retournés" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+          <ListView fx:id="returnedListView" prefHeight="150" />
+      </VBox>
+   </children>
+</AnchorPane>
